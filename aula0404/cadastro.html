@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="estilos/estilosCadastros.css"/>
+    <script src="scripts/scriptCadastro.js"></script>
+
+    
+</head>
+
+<body>
+    <div>
+        <form action="#" method="POST">
+            <label>Nome</label>
+            <input type="text" placeholder="Informe o nome"/>
+            <label>Idade</label>
+            <input type="number" placeholder="Informe a idade" min="0" max="100"/>
+            <label>E-Mail</label>
+            <input type="email" placeholder="Informe o email" />
+            <input type="date" />
+
+            <ol>
+                <li>
+                    <input type="checkbox" id="livros" />
+                    <label for="livros"> Livros</label>
+                </li>
+                <li>
+                   <input type="checkbox" id="musicas"/>
+                   <label for="musicas">Musicas</label>  
+                </li>
+            </ol>  
+            
+
+            <input type="radio">Feminino</input> 
+            <input type="radio">Masculino</input> 
+            <input type="password" placeholder="Informe a senha" /> 
+                
+            <textarea cols="50" rows="10" style="resize:none"></textarea>
+            
+            <select>
+                <option>Um</option>
+                <option>Dois</option>
+                <option>Três</option>
+            </select>
+
+            <select>
+                <option value="1">Açougue</option>
+                <option>Frutas</option>
+                <option>Verduras</option>        
+            </select>
+
+            <img src="imagens/foto1.png" alt="" width="100px" height="100px" />
+            <input type="file" placeholder="Carregue a imagem"></input>
+            
+
+        </form>
+
+        <button onclick="onSubmit()">Gravar Dados</button> 
+
+    </div>
+    
+</body>
+</html>

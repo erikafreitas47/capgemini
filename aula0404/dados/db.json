@@ -1,0 +1,31 @@
+{
+    "contatos": [
+        {
+            "id": 1,
+            "nome": "Erika",
+            "fone": "3333-4444",
+            "email": "erika@email.com"
+        },
+
+        {
+            "id": 2,
+            "nome": "Maisa",
+            "fone": "3333-5555",
+            "email": "maisa@email.com"            
+        },
+
+        {
+            "id": 3,
+            "nome": "Rita",
+            "fone": "3333-6666",
+            "email": "rita@email.com"            
+        },
+
+        {
+            "id": 4,
+            "nome": "Rejane",
+            "fone": "3333-7777",
+            "email": "rejane@email.com"            
+        }
+    ]
+}
