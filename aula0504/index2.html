@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Aula 05/04</title>
+
+    <style>
+
+        * {
+            margin: 0;
+        }
+
+        nav {
+            background-color: silver;
+            padding: 10px;
+
+        }     
+
+        li a:hover {
+            color: blue;
+        }
+
+        li.showcadastro {
+            display: inline-block;
+        }
+
+        .drop-content {
+            display: none;            
+            position: absolute;            
+            z-index: 1;
+        }
+
+        .drop-content a {
+            text-decoration: none;
+            display: block;
+        }
+        
+        li.showcadastro:hover .drop-content {
+            display: block;
+        }
+
+        .showcadastro a {
+            background-color: blue;
+            color: azure;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .drop-content a {
+            background-color: lightskyblue;
+            margin-top: 10px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+        <ol>
+            <li class="showcadastro">
+
+                <a>Cadastro</a>
+
+                <div class="drop-content">
+                    <a href="#">Cliente</a>
+                    <a href="#">Produto</a>
+                    <a href="#">Categoria</a>
+                </div>
+
+            </li>
+
+        </ol>
+    </nav>
+    
+</body>
+
+</html>
