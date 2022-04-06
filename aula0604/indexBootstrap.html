@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+    crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        .container {
+            background-color: lavender;            
+            border-radius: 5px;
+        }
+    </style>
+    
+</head>
+
+<body>
+
+    <div class="container border border-info" style="width: 40%; padding:30px; margin-top:10px;">
+        <form action="#" class="was-validated" novalidate> 
+
+            <div class="form-group">
+                <label for="nome">Nome completo:</label>
+                <input type="text" class="form-control" id="nome" placeholder="Ex: Érika de Freitas" required>
+                <div class="invalid-feedback">
+                    Informe o nome!
+                </div>            
+            </div>
+
+            <div>
+                <label for="genero">Gênero</label>
+                <br>
+            </div>
+
+            <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" id="feminino" name="radio-stacked" required>
+                <label class="form-check-label" for="feminino">Feminino</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" id="masculino" name="radio-stacked" required>
+                <label class="form-check-label" for="masculino">Masculino</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" id="naobinario" name="radio-stacked" required>
+                <label class="form-check-label" for="naobinario">NB</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" id="agenero" name="radio-stacked" required>
+                <label class="form-check-label" for="agenero">Agênero</label>
+            </div>
+            
+            <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" id="outro" name="radio-stacked" required>
+                <label class="form-check-label" for="outro">Outro</label>
+                <div class="invalid-feedback">Escolha uma opção.</div>
+            </div>
+            <br>
+
+            <div class="form-group">
+                <label for="email">Endereço de Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Ex: erika@email.com" required>
+                <div class="invalid-feedback">
+                    Informe o email!
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="fone">Telefone:</label>
+                    <input type="text" class="form-control" id="fone" placeholder="Ex: (00) 3333-4444" required>
+                    <div class="invalid-feedback">
+                        Informe o telefone!
+                    </div>
+                </div>
+    
+                <div class="form-group col-md-6">
+                    <label for="faixaidade">Faixa etária:</label>
+                    <select class="form-control" id="faixaidade" required>
+                      <option selected disabled value="">Escolha...</option>  
+                      <option>18-25</option>
+                      <option>26-33</option>
+                      <option>34-41</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Informe a faixa etária!
+                    </div>
+                </div>
+            </div>            
+
+            <div class="form-group">
+                <label for="comentarios">Deixe aqui seu comentário:</label>
+                <textarea class="form-control" id="comentarios" rows="2" required></textarea>
+                <div class="invalid-feedback">
+                    Informe um comentário!
+                </div>
+              </div>
+
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="aceito" required>
+                <label class="form-check-label" for="aceito">Aceito os termos de uso</label>
+                <div id="aceito" class="invalid-feedback">
+                    Você precisa aceitar os termos antes de salvar.
+                </div>
+            </div>
+
+            <div>
+                <button type="submit" value="Submit" class="btn btn-outline-success btn-sm">Salvar</button>
+                <button type="reset" value="Reset" class="btn btn-outline-danger btn-sm">Cancelar</button>
+            </div>
+
+         </form> 
+    </div>
+
+    
+
+
+        
+    
+</body>
+</html>

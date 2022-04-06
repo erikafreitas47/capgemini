@@ -1,0 +1,23 @@
+{
+    "categorias": [
+        {
+            "id": 1,
+            "nome": "frutas"
+        },
+
+        {
+            "id": 2,
+            "nome": "acougue"
+        },
+
+        {
+            "id": 3,
+            "nome": "limpeza"
+        },
+
+        {
+            "id": 4,
+            "nome": "bebidas"
+        }
+    ]
+}

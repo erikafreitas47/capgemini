@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="loadCategoria()">
+
+    <h1>Cadastro de produto</h1>
+
+    <div>
+        <form action="#" method="post">
+
+            <label>Produto:</label>
+            <input type="text" placeholder="Informe o produto">
+            <br><br>
+            <label>Preço:</label>
+            <input type="number" placeholder="Informe o preco">
+            <br><br>
+            <label>Unidade de medida:</label>
+            <input type="number" placeholder="Informe a unidade de medida">
+            <br><br>
+            <label>Fornecedor:</label>
+            <input type="number" placeholder="Informe o fornecedor">
+            <br><br>
+            <label>Tipo do produto:</label>
+            <select id="categoria"></select>
+
+        </form>
+    </div>
+
+    <script>
+
+        function loadCategoria () {
+
+            fetch("http://localhost:3000/categorias")
+                .then(x => x.text())
+                .then(cat => display(cat))
+        }
+
+        function display(dados){
+            var lista = JSON.parse(dados);
+            var opt = ""
+
+            for (let ob in lista){
+                opt += "<option var=" + lista[ob].id + ">" + lista[ob].nome + "</option>"
+            }
+
+            document.getElementById("categoria").innerHTML = opt;
+        }
+
+
+
+    </script>
+
+</body>
+
+
+
+</html>
