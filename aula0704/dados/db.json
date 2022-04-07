@@ -1,0 +1,92 @@
+{
+  "contatos": [
+    {
+      "id": 1,
+      "nome": "Ana",
+      "telefone": "3333-4444",
+      "email": "ana@email.com"
+    },
+    {
+      "id": 2,
+      "nome": "Julia",
+      "telefone": "3333-5555",
+      "email": "julia@email.com"
+    },
+    {
+      "id": 3,
+      "nome": "Luana",
+      "telefone": "3333-6666",
+      "email": "luana@email.com"
+    },
+    {
+      "nome": "Erika",
+      "telefone": "(75)982971924",
+      "email": "erika@gmail.com",
+      "id": 4
+    },
+    {
+      "nome": "Maisa",
+      "telefone": "3333-7777",
+      "email": "maisa@gmail.com",
+      "id": 5
+    }
+  ],
+  "fornecedores": [
+    {
+      "id": 1,
+      "nome": "Supermercado Fagundes"
+    },
+    {
+      "id": 2,
+      "nome": "Supermercado Pereira"
+    },
+    {
+      "id": 3,
+      "nome": "Supermercado Todo Dia"
+    }
+  ],
+  "categorias": [
+    {
+      "id": 1,
+      "nome": "material de limpeza"
+    },
+    {
+      "id": 2,
+      "nome": "frutas"
+    },
+    {
+      "id": 3,
+      "nome": "açougue"
+    },
+    {
+      "id": 4,
+      "nome": "higiene"
+    }
+  ],
+  "produtos": [
+    {
+      "descricao": "manga",
+      "preco": "4",
+      "estoque": "32",
+      "fornecedor": "Supermercado Pereira",
+      "categoria": "frutas",
+      "id": 1
+    },
+    {
+      "descricao": "feijao",
+      "preco": "4",
+      "estoque": "32",
+      "fornecedor": "Supermercado Fagundes",
+      "categoria": "frutas",
+      "id": 2
+    },
+    {
+      "descricao": "arroz",
+      "preco": "2,30",
+      "estoque": "20",
+      "fornecedor": "Supermercado Todo Dia",
+      "categoria": "frutas",
+      "id": 3
+    }
+  ]
+}
