@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDITAR/EXCLUIR</title>
+    <link rel="stylesheet" href="./estilos/estilo.css"/>
+    <script src="./scripts/classes.js"></script>
+
+</head>
+
+<body onload="pegarParametro()">
+
+    <div class="container">
+
+        <h2>Editar Cadastro</h2>
+
+            <div class="entrada">
+
+                <input type="text" disabled/>
+
+                <label for="nome">Informe o nome:</label>
+                <input type="text" id="nome" placeholder="Informe o nome" />
+
+                <label for="idade">Informe a idade:</label>
+                <input type="number" id="idade" placeholder="Informe a idade" />
+
+                <label for="tiporegistro">Informe seu registro:</label>
+                    <select id="tiporegistro">
+                        <option>Aluno</option>
+                        <option>Professor</option>
+                        <option>Secretaria</option>
+                    </select>
+            </div>
+
+            <div class="botoes">
+                <button onclick="gravarDados()" class="salvar">Salvar</button>
+                <button onclick="apagar()" class="apagar">Excluir Contato</button>
+                <button class="cancelar">Cancelar</button>
+            </div>
+    </div>
+
+    <script>
+
+        function pegarParametro () {
+            const urlParams = new URLSearchParams(window.location.search);
+            let idContato = urlParams.get('id');
+
+            let objeto = new Contato();
+            objeto.consultarById(idContato, autoPreencheForm);
+        }
+
+        function autoPreencheForm (data) {
+            let objeto = JSON.parse(data);
+            document.getElementsByTagName("input")[0].value = objeto.id;
+            document.getElementsByTagName("input")[1].value = objeto.nome;
+            document.getElementsByTagName("input")[2].value = objeto.idade;
+            document.getElementsByTagName("select")[0].value = objeto.registro;
+        }
+
+        function gravar () {
+            var id = document.getElementsByTagName("input")[0].value;
+            var nome = document.getElementsByTagName("input")[1].value;
+            var idade = document.getElementsByTagName("input")[2].value;
+            var registro = document.getElementsByTagName("select")[0].value;
+
+            let objeto = new Contato(id, nome, idade, registro);
+
+            objeto.atualizar();
+        }
+
+        
+
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONSULTAR PESSOA</title>
+    <link rel="stylesheet" href="./estilos/estilo.css"/>
+    <script src="./scripts/classes.js"></script>
+
+</head>
+
+<body onload="carregarDados()">
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Registro</th>
+                <th>Editar/Apagar</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <!--Os dados serão carregados pela função-->
+        </tbody>
+
+    </table>
+
+    <script>
+
+        function carregarDados () {
+            let objeto = new Contato ();
+            objeto.consultarDados(displayGeral);
+        }
+
+        function displayGeral (dados) {
+
+            console.log(dados);
+
+            let listaDados = JSON.parse(dados);
+            let trs = "";
+
+            for (let i in listaDados){
+                trs += `<tr>
+                        <td> ${listaDados[i].id} </td>
+                        <td> ${listaDados[i].nome} </td>
+                        <td> ${listaDados[i].idade} </td>
+                        <td> ${listaDados[i].registro} </td>
+                        <td> <a href="editar-excluir.html?id=${listaDados[i].id}">E/A</a><td>
+                        </tr>`
+            }
+
+            document.getElementsByTagName("tbody")[0].innerHTML = trs;
+        }
+
+    </script>
+    
+</body>
+</html>

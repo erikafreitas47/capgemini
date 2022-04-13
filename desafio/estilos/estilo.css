@@ -1,0 +1,88 @@
+.container {
+    width: 400px;
+    margin: auto;
+}
+
+.entrada {
+    width: 100%;
+}
+
+.botoes {
+    width: 100%;
+    display: flex;
+    justify-content:space-around;
+}
+
+input {
+    width: 100%;
+    margin-bottom: 3px;
+    padding: 3px 2px 3px 3px;
+}
+
+button {
+    margin-top: 3px;    
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.salvar {
+    background-color: white;
+    color: green;
+    border: 1px solid green;
+}
+
+.salvar:hover {
+    background-color: green;
+    color: white;
+}
+
+.cancelar {
+    background-color: white;
+    color: red;
+    border: 1px solid red;
+}
+
+.cancelar:hover {
+    background-color: red;
+    color: white;
+}
+
+.apagar {
+    background-color: white;
+    color: orange;
+    border: 1px solid orange;
+}
+
+.apagar:hover {
+    background-color:orange;
+    color: white;
+}
+
+table {
+    width: 400px;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: lightgreen;
+    color: white;
+}
+
+tbody tr:nth-child(even){
+    background-color: silver;
+}
+
+tbody tr:hover {
+    background-color: plum;
+    color: white;
+}
+
+td {
+    padding: 8px;
+}
+
+th {
+    padding: 10px;
+    text-align: left;
+}

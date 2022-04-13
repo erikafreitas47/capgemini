@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CADASTRO PESSOA</title>
+    <link rel="stylesheet" href="./estilos/estilo.css"/>
+    <script src="./scripts/classes.js"></script>
+
+</head>
+
+
+<body>
+
+    <div class="container">
+
+            <div class="entrada">
+
+                <label for="nome">Informe o nome:</label>
+                <input type="text" id="nome" placeholder="Informe o nome" />
+
+                <label for="idade">Informe a idade:</label>
+                <input type="number" id="idade" placeholder="Informe a idade" />
+
+                <label for="tiporegistro">Informe seu registro:</label>
+                    <select id="tiporegistro">
+                        <option>Aluno</option>
+                        <option>Professor</option>
+                        <option>Secretaria</option>
+                    </select>
+            </div>
+            
+            <div class="botoes">
+                <button onclick="gravarDados()" class="salvar">Salvar</button>
+                <button class="cancelar">Cancelar</button>
+            </div>            
+
+    </div>
+
+    <script>
+
+        function gravarDados () {
+            var nome = document.getElementsByTagName("input")[0].value;
+            var idade = document.getElementsByTagName("input")[1].value;
+            var registro = document.getElementsByTagName("select")[0].value;
+
+            let objeto = new Contato (0,nome,idade,registro);
+
+            objeto.salvar();
+        }
+    </script>
+
+
+    
+</body>
+</html>
