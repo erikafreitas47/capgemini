@@ -9,7 +9,6 @@ class Contato {
     }
 
     salvar () {
-        console.log(this);
         fetch(urlBase, {
                 method: 'POST',
                 body: JSON.stringify(this),
@@ -43,6 +42,12 @@ class Contato {
                     }
             }
         )
+    }
+
+    excluir (idContato) {
+        fetch(`${urlBase}/${idContato}`, {
+            method: 'DELETE'
+        })
     }
 
  }

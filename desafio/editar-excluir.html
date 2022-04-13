@@ -36,7 +36,7 @@
 
             <div class="botoes">
                 <button onclick="gravarDados()" class="salvar">Salvar</button>
-                <button onclick="apagar()" class="apagar">Excluir Contato</button>
+                <button onclick="deletar()" class="apagar">Excluir Contato</button>
                 <button class="cancelar">Cancelar</button>
             </div>
     </div>
@@ -68,6 +68,11 @@
             let objeto = new Contato(id, nome, idade, registro);
 
             objeto.atualizar();
+        }
+
+        function deletar () {
+            let objeto = new Contato ();
+            objeto.excluir(document.getElementsByTagName("input")[0].value);
         }
 
         
