@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cineminha</title>
+
+    <!--
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    -->
+
+    <style>
+
+        #sala button {
+            margin: 2px;
+        }
+        .livre {
+            background-color: green;
+        }
+        .ocupado {
+            background-color: red;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    
+    <div>
+
+        <h2>Nosso Cineminha</h2>
+        <hr />
+
+        <label for="total">Informe quantas cadeiras criar:</label>
+        <input type="number" id="total"/>
+
+        <button onclick="criarSala()">Criar Sala de Cinema</button> 
+        <hr /> 
+
+        <div id="sala">
+            <!--Colocar botões criados-->
+        </div>
+
+        <hr />
+
+        <labe id="totalOcupacao"></label>
+        
+    </div>
+
+    <script>
+
+        function criarSala () {
+            var sala = document.getElementById("sala");
+            sala.innerHTML = "";
+
+            var qtdCadeiras = document.getElementById("total").value;
+
+            for (let i = 1 ; i <= qtdCadeiras ; i++) {
+                bt = document.createElement("button");
+                bt.innerText = i;   
+                bt.className = "livre" 
+                bt.setAttribute("onclick", "reservar(this)");           
+                sala.appendChild(bt);
+            }
+            
+            totalOcupacao();
+        }
+        
+        function totalOcupacao () {
+            var x = document.getElementsByClassName("livre").length;
+            var y = document.getElementsByClassName("ocupado").length;
+            document.getElementById("totalOcupacao").innerHTML = `Total Livres: ${x}
+                                                                Total ocupados: ${y}`
+        }
+
+        function reservar (elemento) {
+            var classe = elemento.getAttribute("class");
+            if (classe === "livre"){
+                elemento.setAttribute("class", "ocupado");
+            }
+            else {
+                elemento.setAttribute("class", "livre");
+            }            
+            totalOcupacao();
+        }
+
+
+    </script>
+
+    
+</body>
+</html>

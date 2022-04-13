@@ -1,0 +1,22 @@
+{
+  "contatos": [
+    {
+      "id": 1,
+      "nome": "Ana",
+      "fone": "12345678",
+      "email": "ana@email.com"
+    },
+    {
+      "id": 2,
+      "nome": "maisa",
+      "fone": "345678",
+      "email": "maisa@email.com"
+    },
+    {
+      "id": 3,
+      "nome": "gabriel",
+      "fone": "32372847",
+      "email": "gabriel@gmail.com"
+    }
+  ]
+}
