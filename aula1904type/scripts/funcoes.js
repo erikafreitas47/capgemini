@@ -1,4 +1,13 @@
 "use strict";
-var nome;
-nome = "Vilson";
-console.log(nome);
+function soma(n1, n2) {
+    try {
+        if ((n1 == 0) || (n2 == 0)) {
+            throw "Parametros não informados.";
+        }
+        return n1 + n2;
+    }
+    catch (err) {
+        console.log("Passou aqui");
+        return err;
+    }
+}
