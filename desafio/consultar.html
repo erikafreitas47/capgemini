@@ -5,8 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CONSULTAR PESSOA</title>
-    <link rel="stylesheet" href="./estilos/estilo.css"/>
+    <link rel="stylesheet" href="./estilos/estiloConsulta.css"/>
     <script src="./scripts/classes.js"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 
 </head>
 
@@ -30,6 +33,10 @@
 
     </table>
 
+    <br><br>
+
+    <button onclick="voltar()" class="voltar">Voltar</button>
+
     <script>
 
         function carregarDados () {
@@ -38,9 +45,6 @@
         }
 
         function displayGeral (dados) {
-
-            console.log(dados);
-
             let listaDados = JSON.parse(dados);
             let trs = "";
 
@@ -55,6 +59,10 @@
             }
 
             document.getElementsByTagName("tbody")[0].innerHTML = trs;
+        }
+
+        function voltar () {
+            window.history.back();
         }
 
     </script>

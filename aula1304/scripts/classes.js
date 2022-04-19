@@ -45,4 +45,10 @@ class Contato {
         )
     }
 
+    excluir (idContato) {
+        fetch(`${urlBase}/${idContato}`, {
+                method: 'DELETE'                
+            })  
+    }
+
 }

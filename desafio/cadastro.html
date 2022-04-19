@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CADASTRO PESSOA</title>
-    <link rel="stylesheet" href="./estilos/estilo.css"/>
+    <link rel="stylesheet" href="./estilos/estiloCadastro.css"/>
     <script src="./scripts/classes.js"></script>
 
 </head>
@@ -17,24 +17,63 @@
 
             <div class="entrada">
 
-                <label for="nome">Informe o nome:</label>
-                <input type="text" id="nome" placeholder="Informe o nome" />
+                <fieldset>
+                    <legend>Tipo de Registro</legend>
+                </fieldset>
 
-                <label for="idade">Informe a idade:</label>
-                <input type="number" id="idade" placeholder="Informe a idade" />
+                <br>
 
-                <label for="tiporegistro">Informe seu registro:</label>
-                    <select id="tiporegistro">
-                        <option>Aluno</option>
-                        <option>Professor</option>
-                        <option>Secretaria</option>
-                    </select>
-            </div>
-            
-            <div class="botoes">
-                <button onclick="gravarDados()" class="salvar">Salvar</button>
-                <button class="cancelar">Cancelar</button>
-            </div>            
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" placeholder="Ex: Erika de Freitas" />
+    
+                    <label for="idade">Idade:</label>
+                    <input type="number" id="idade" placeholder="Ex: 25" />
+
+                    <label for="cpf">CPF:</label>
+                    <input type="number" id="cpf" placeholder="Apenas números">
+
+                    <label for="rg">RG:</label>
+                    <input type="number" id="rg" placeholder="Apenas números">
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Ex: aaa@aaa.com"
+
+                    <label for="cidadeNatal">Naturalidade:</label>
+                    <input type="text" id="cidadeNatal" placeholder="Ex: Santo Amaro">
+
+                    <label for="uf">Estado:</label>
+                    <input type="text" id="uf" placeholder="Ex: Bahia">   
+    
+                     
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend>Endereço</legend>
+
+                    <label for="rua">Rua:</label>
+                    <input type="text" id="rua" placeholder="Ex: Rua Ferreira Bandeira"/>
+
+                    <label for="numero">Número:</label>
+                    <input type="number" id="numero" placeholder="Ex: 284"/>
+
+                    <label for="bairro">Bairro:</label>
+                    <input type="text" id="bairro" placeholder="Ex: Centro"/>
+
+                </fieldset>
+                
+                <br>
+
+                <div class="botoes">
+                    <button onclick="gravarDados()" class="salvar">Salvar</button>
+                    <button class="cancelar">Cancelar</button>
+                    <button onclick="voltar()" class="voltar">Voltar</button>
+                </div> 
+
+           
 
     </div>
 
@@ -48,6 +87,10 @@
             let objeto = new Contato (0,nome,idade,registro);
 
             objeto.salvar();
+        }
+
+        function voltar () {
+            window.history.back();
         }
     </script>
 

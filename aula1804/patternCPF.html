@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Informe o CPF" />
+    <button onclick="validaCPF()">Validar CPF</button>
+    <br>
+    <br>
+
+    <input type="text" placeholder="Informe o email" />
+    <button onclick="validaEmail()">Validar Email</button>
+
+    <script>
+        
+        function validaCPF () {
+            var cpf = document.getElementsByTagName("input")[0].value;
+            var patterCPF = /[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}/;
+
+            let x = patterCPF.test(cpf);
+            alert(x);
+        }
+        
+        function validaEmail () {
+            var email = document.getElementsByTagName("input")[1].value;
+            var patterEmail = /^[a-z0-9.]+@[a-z0-9]+\.[a-z](.[a-z]+)?/i
+
+            let y = patterEmail.test(email)
+            console.log(y);
+        }
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -3,20 +3,20 @@
     {
       "id": 1,
       "nome": "Ana",
-      "fone": "12345678",
-      "email": "ana@email.com"
+      "fone": "1234-5678",
+      "email": "ana@gmail.com"
     },
     {
       "id": 2,
-      "nome": "Maisa Maga",
-      "fone": "345678",
-      "email": "maisa@email.com"
+      "nome": "Maisa ",
+      "fone": "3456-7890",
+      "email": "maisa@gmail.com"
     },
     {
       "id": 3,
-      "nome": "Gabriel Maga",
-      "fone": "32372847",
-      "email": "gabriel@gmail.com"
+      "nome": "Erika",
+      "fone": "3333-4444",
+      "email": "erika@gmail.com"
     }
   ]
 }

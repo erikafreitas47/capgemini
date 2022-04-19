@@ -1,3 +1,5 @@
+
+
 .container {
     width: 400px;
     margin: auto;
@@ -44,6 +46,17 @@ button {
 
 .cancelar:hover {
     background-color: red;
+    color: white;
+}
+
+.apagar {
+    background-color: white;
+    color: orange;
+    border: 1px solid orange;
+}
+
+.apagar:hover {
+    background-color:orange;
     color: white;
 }
 
