@@ -25,3 +25,8 @@ tbody tr:hover {
     color: red;
 
 }
+
+label span {
+    color: red;
+    font-weight: bold;
+}
