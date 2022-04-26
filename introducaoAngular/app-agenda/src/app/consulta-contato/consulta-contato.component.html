@@ -1,0 +1,25 @@
+<div>
+    <h1>Consulta de contatos</h1>
+
+    <table>
+        
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Telefone</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let contato of contatos">
+                <td>{{ contato. id}}</td>
+                <td>{{ contato. nome}}</td>
+                <td>{{ contato. fone}}</td>
+                <td>{{ contato. email}}</td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>

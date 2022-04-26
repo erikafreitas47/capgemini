@@ -11,7 +11,7 @@ table {
 }
 
 thead {
-    background-color: blue;
+    background-color: orangered;
     color: white;
     text-align: left;
 }
@@ -21,7 +21,7 @@ tbody tr:nth-child(even) {
 }
 
 tbody tr:hover {
-    background-color: aquamarine;
+    background-color: cornsilk;
     color: red;
 
 }
@@ -29,4 +29,12 @@ tbody tr:hover {
 label span {
     color: red;
     font-weight: bold;
+}
+
+button {
+    background-color: orangered;
+    border: none;
+    border-radius: 2px;
+    display: inline-block;
+    padding: 8px;
 }
