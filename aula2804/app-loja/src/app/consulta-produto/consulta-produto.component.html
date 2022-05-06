@@ -1,0 +1,72 @@
+<!--
+<div class="container mt-3">
+    <table class="table table-striped">        
+        <thead class="bg-primary">
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Categoria</th>
+            <th>Preço Unitário</th>
+            <th>Quantidade no Estoque</th>
+            <th>Editar</th>
+            <th>Excluir</th>
+        </thead>
+
+        <tbody *ngFor="let produto of produtos">
+            <td>{{produto.id}}</td>
+            <td>{{produto.descricao}}</td>
+            <td>{{produto.categoria}}</td>
+            <td>{{produto.preco}}</td>
+            <td>{{produto.estoque}}</td>
+            <td><a [routerLink]="['/produtos', produto.id]"><i class="material-icons">mode_edit</i></a></td>
+            <td> <a role="button" style="color: red"><i class="material-icons" (click)="excluir(produto.id)">delete</i></a></td>
+        </tbody>
+
+    </table>
+</div>
+-->
+
+<div class="container mt=3">
+    <table class="table table-striped">
+
+        <thead>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Gênero</th>
+            <th>Data Nascimento</th>
+            <th>CEP</th>
+            <th>Rua</th>
+            <th>Número</th>
+            <th>Bairro</th>
+            <th>Cidade</th>
+            <th>UF</th>
+            <th>Telefone</th>
+            <th>Email</th>
+            <th>Login</th>
+            <th>Senha</th>
+            <th>Tipo Pessoa</th>
+            <th>Ativo</th>
+        </thead>
+
+        <tbody *ngFor="let produto of produtos">
+            <td>{{ produto.id }}</td>
+            <td>{{ produto.nome }}</td>
+            <td>{{ produto.genero }}</td>
+            <td>{{ produto.dataNascimento }}</td>
+            <td>{{ produto.cep }}</td>
+            <td>{{ produto.rua }}</td>
+            <td>{{ produto.numero }}</td>
+            <td>{{ produto.bairro }}</td>
+            <td>{{ produto.cidade }}</td>
+            <td>{{ produto.uf }}</td>
+            <td>{{ produto.telefone }}</td>
+            <td>{{ produto.email }}</td>
+            <td>{{ produto.login }}</td>
+            <td>{{ produto.senha }}</td>
+            <td>{{ produto.tipoPessoa }}</td>
+            <td>{{ produto.ativo }}</td>
+        </tbody>
+
+
+    </table>
+
+</div>

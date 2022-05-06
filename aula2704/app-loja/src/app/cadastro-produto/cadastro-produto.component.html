@@ -1,0 +1,37 @@
+<div class="container">
+    <br>
+    <h2>Cadastrar Novo Produto</h2>
+    <form #f="ngForm" (ngSubmit)="gravar(f.value)">
+
+        <div class="mb-3 mt-3">     
+            <input class="form-control" ngModel name="descricao" type="text" placeholder="Nome do produto"/>
+        </div>
+
+        <div class="mb-3 mt3">
+            <select class="form-select" ngModel name="categoria">
+            <option>Higiene Pessoal</option>
+            <option>Produto de Limpeza</option>
+            <option>Hortfruit</option>
+            <option>Alimentação</option>
+            </select>
+        </div>
+
+        <div class="mb-3 mt-3">
+            <input class="form-control" ngModel name="preco" type="number" placeholder="Preço unitário"/>
+        </div>
+
+        <div class="mb-3 mt-3">
+            <input class="form-control" ngModel name="estoque" type="number" placeholder="Quantidade de produto no estoque"/>
+        </div>
+
+        <div class="mb-3 mt-3">
+            <button class="btn btn-success me-2">Salvar</button>
+            <button (click)="limparMsg()" type="reset" class="btn btn-danger">Cancelar</button>
+        </div>
+
+        <a routerLink="/consultaProdutos">Ver lista de produtos</a>
+        
+        <label>{{msg}}</label>
+        
+    </form>
+</div>

@@ -1,0 +1,35 @@
+<div>
+    <br>
+    <h2 class="text-center">Editar Produto</h2>
+
+    <div class="mb-3 mt3">
+        <input class="form-control" type="text" [(ngModel)]="produto.id" />
+    </div>
+
+    <div class="mb-3 mt3">
+        <input class="form-control" type="text" [(ngModel)]="produto.descricao" />
+    </div>
+
+    <div class="mb-3 mt-3">
+        <select class="form-control" type="text" [(ngModel)]="produto.categoria">
+            <option>Higiene Pessoal</option>
+            <option>Produto de Limpeza</option>
+            <option>Hortfruit</option>
+            <option>Alimentação</option>
+        </select>
+    </div>
+
+    <div class="mb-3 mt-3">
+        <input class="form-control" type="text" [(ngModel)]="produto.preco" />
+    </div>
+
+    <div class="mb-3 mt-3">
+        <input class="form-control" type="text" [(ngModel)]="produto.estoque" />
+    </div>   
+    
+    <button class="btn btn-success me-2" (click)="efetivarAlteracao()">Salvar</button>
+    
+    <label> {{msg}} </label>  
+ 
+</div>
+

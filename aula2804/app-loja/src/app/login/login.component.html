@@ -1,0 +1,25 @@
+<div class="container">
+    <br>
+    <h2 class="text-center">Login de Usuário</h2>
+    <form #f="ngForm" (ngSubmit)="fazerLogin(f.value)">
+        <div class="mb-3 mt-3">
+            <input class="form-control" ngModel name="email" type="text" placeholder="Informe o email"/>
+        </div>
+
+        <div class="mb-3 mt-3">
+            <input class="form-control" ngModel name="senha" type="password" placeholder="Informe a senha"/>
+        </div>
+
+        <div class="mb-3 mt-3">
+            <button class="btn btn-success">Login</button>
+        </div>       
+        
+    </form>
+    
+    <a routerLink="/cadastroUsuario">Não é cadastrado?</a>
+
+    <p>
+        {{ usuarioConectado.perfil }}
+    </p>
+</div>
+<router-outlet></router-outlet>

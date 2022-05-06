@@ -1,0 +1,39 @@
+<div class="container">
+    <br>
+    <h2 class="text-center">Cadastrar Novo Usuário</h2>
+    <form #f="ngForm" (ngSubmit)="gravarUser(f.value)">
+
+        <div class="mt-3 mb-3">
+            
+            <input required class="form-control" #fnome="ngModel" ngModel name="nome" type="text" placeholder="Informe o nome"/>
+                <div *ngIf="fnome.invalid" class="ng-invalid">
+                    Insira um nome
+                </div>
+        </div>
+
+        <div class="mt-3 mb-3">
+            <input required class="form-control" #femail="ngModel" ngModel name="email" type="email" placeholder="Informe o email"/>
+                <div *ngIf="femail.invalid" class="ng-invalid">
+                    Insira um endereço de email
+                </div>
+        </div>
+
+        <div class="mt-3 mb-3">
+            <input required class="form-control" #fsenha="ngModel" ngModel name="senha" type="text" placeholder="Informe a senha"/>
+                <div *ngIf="fsenha.invalid" class="ng-invalid">
+                    Insira uma senha
+                </div>
+        </div>
+
+        <div class="mt-3 mb-3">
+            <button [disabled]="f.invalid" class="btn btn-success me-2">Salvar</button>
+            <button type="reset" class="btn btn-danger">Cancelar</button>
+
+        </div>
+
+    </form>
+
+    <label>{{msg}}</label>
+
+
+</div>>

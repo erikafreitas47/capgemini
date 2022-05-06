@@ -1,0 +1,22 @@
+<div class="container mt-3">
+    <table class="table table-striped">        
+        <thead class="bg-primary">
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Categoria</th>
+            <th>Preço Unitário</th>
+            <th>Quantidade no Estoque</th>
+            <th>Ações</th>
+        </thead>
+
+        <tbody *ngFor="let produto of produtos">
+            <td>{{produto.id}}</td>
+            <td>{{produto.descricao}}</td>
+            <td>{{produto.categoria}}</td>
+            <td>{{produto.preco}}</td>
+            <td>{{produto.estoque}}</td>
+            <td><a [routerLink]="['/produtos', produto.id]"><i class="material-icons">mode_edit</i> <i class="material-icons">delete</i> </a></td>
+        </tbody>
+
+    </table>
+</div>>

@@ -1,0 +1,56 @@
+<div class="container">
+    <br>
+    <h2 class="text-center">Cadastrar Novo Produto</h2>
+    <form #f="ngForm" (ngSubmit)="gravar(f.value)">
+
+        <div class="mb-3 mt-3">     
+            <input required class="form-control" #fnome="ngModel" ngModel name="descricao" type="text" placeholder="Nome do produto"/>
+            <div *ngIf="fnome.invalid" class="ng-invalid">
+                Informe a descrição do produto
+            </div>
+        </div>
+
+        <div class="mb-3 mt3">
+            <select required class="form-select" #fcategoria="ngModel" ngModel name="categoria">
+            <option></option>    
+            <option>Higiene Pessoal</option>
+            <option>Produto de Limpeza</option>
+            <option>Hortfruit</option>
+            <option>Alimentação</option>
+            </select>
+            <div *ngIf="fcategoria.invalid" class="ng-invalid">
+                Informe a categoria
+            </div>
+
+        </div>
+
+        <div class="mb-3 mt-3">
+            <input required class="form-control" #fpreco="ngModel" ngModel name="preco" type="number" placeholder="Preço unitário"/>
+            <div *ngIf="fpreco.invalid" class="ng-invalid">
+                Informe o preço do produto
+            </div>
+        </div>
+
+        <div class="mb-3 mt-3">
+            <input required class="form-control" #festoque="ngModel" ngModel name="estoque" type="number" placeholder="Quantidade de produto no estoque"/>
+            <div *ngIf="festoque.invalid" class="ng-invalid">
+                Informe a quantidade no estoque
+            </div>
+        </div>
+
+        <div class="mb-3 mt-3">
+            <button [disabled]="f.invalid" class="btn btn-success me-2">Salvar</button>
+            <button type="reset" class="btn btn-danger">Cancelar</button>
+        </div>
+
+        <a routerLink="/consultaProdutos" style="color:navy; text-decoration:none; border: 1px solid navy">Ver lista de produtos</a>
+        
+        <label>{{msg}}</label>
+        
+        <!---->
+
+        
+        
+        
+    </form>
+</div>
