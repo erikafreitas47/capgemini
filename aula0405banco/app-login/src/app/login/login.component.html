@@ -1,0 +1,11 @@
+<div>
+
+    <form #f="ngForm" (submit)="logar(f.value)">
+        <input type="email" ngModel name="email" placeholder="Informe o email"/>
+        <input type="password" ngModel name="senha" placeholder="Informe a senha"/>
+        <button>Logar</button>
+    </form>
+
+    <button (click)="verToken()">Ver Token</button>
+
+</div>
